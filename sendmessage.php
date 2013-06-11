@@ -11,9 +11,10 @@ $url = 'https://api.meetup.com/2/message?access_token='.$_SESSION['accesstoken']
 
 $ch=curl_init($url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch,CURLOPT_POST, 5);
 $r=curl_exec($ch);
 curl_close($ch);
 
-return $r
+echo $r
 
 ?>
