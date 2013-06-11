@@ -12,6 +12,7 @@ curl_close($ch);
 
 $_SESSION['accesstoken'] = json_decode($r)->access_token;
 
+
 header("Location: messenger.html");
 die();
 
