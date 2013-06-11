@@ -6,11 +6,13 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 		$(".send").click() {
+			alert('started');
 			$.ajax({ // ajax call starts
 			  url: 'sendmessage.php', // JQuery loads serverside.php
 			  data: { memberid: $("#memberid"), groupid: $("#groupid"), message: $("#message"), subject: $("#subject") }, // message info
 			  success: function(data) // Variable data contains the data we get from serverside
 			  {
+				  alert('success');
 				  $('#confirmation').html(data); // Clear #groups div
 				}
 			});
