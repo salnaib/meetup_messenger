@@ -7,16 +7,22 @@
 <script>
 $(document).ready(function(){
 	$(".send").click(function(){
-		alert($("#memberid").val());
 		$.ajax({ // ajax call starts
-		  url: 'sendmessage.php', // JQuery loads serverside.php
-		  data: { memberid: $("#memberid").val(), groupid: $("#groupid").val(), message: $("#message").val(), subject: $("#subject").val() }, // message info
-		  success: function(data) // Variable data contains the data we get from serverside
-		  {
+			url: 'sendmessage.php', // JQuery loads serverside.php
+			data: { memberid: $("#memberid").val(), groupid: $("#groupid").val(), message: $("#message").val(), subject: $("#subject").val() }, // message info
+			success: function(data) // Variable data contains the data we get from serverside
+			{	
 			  $('#confirmation').html(data); // Clear #groups div
 			}
 		});
 	});
+	
+	$(".logout").click(function(){
+		$.ajax({ // ajax call starts
+			url: 'de-meetup.php', // JQuery loads serverside.php
+		});
+	});
+
 });
 </script>
 </head>
@@ -27,7 +33,8 @@ $(document).ready(function(){
 		Group ID: <input id="groupid"></input><br>
 		Subject: <input id="subject"></input><br>
 		Message: <textarea id="message"></textarea><br>
-		<button class="send">Send</button>
+		<button class="send">Send</button> <button class="logout">Logout</button>
+		
 		
 </body>
 </html>
