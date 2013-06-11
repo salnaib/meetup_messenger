@@ -8,8 +8,6 @@ curl_setopt($ch,CURLOPT_POST, 5);
 $r=curl_exec($ch);
 curl_close($ch);
 
-$_SESSION['accesstoken'] = json_decode($r)['access_token'];
-
 echo $_SESSION['accesstoken'];
 
 ?>
