@@ -1,4 +1,7 @@
 <?php
+
+session_start();
+
 //check if you have curl loaded
 if(!function_exists("curl_init")) die("cURL extension is not installed");
 
