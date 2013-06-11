@@ -7,11 +7,11 @@ $oauth->client_id = "elimmsk4tfqtc7b9il0vk5u3d7";
 $oauth->client_secret = "amq5s5799jnv5bdrt65ofg4mtq";
 $oauth->redirect_uri  ="http://radiant-anchorage-6507.herokuapp.com/messenger.php";
 
-$oauth->scope="basic, messaging, ageless";
+$oauth->scope="basic, messaging";
 
 $oauth->Initialize();
 
-//$code = ($_REQUEST["code"]) ?  ($_REQUEST["code"]) : "";
+$code = ($_REQUEST["code"]) ?  ($_REQUEST["code"]) : "";
 
 if(empty($code)) {
 	$oauth->Authorize();
