@@ -6,6 +6,7 @@ $url = 'https://secure.meetup.com/oauth2/access?clientid=elimmsk4tfqtc7b9il0vk5u
 
 $ch=curl_init($url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch,CURLOPT_POST, 5);
 $r=curl_exec($ch);
 curl_close($ch);
 
