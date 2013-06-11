@@ -4,7 +4,7 @@ include "socialmedia_oauth_connect.php";
 $oauth = new socialmedia_oauth_connect();
 $oauth->provider="MeetUp";
 $oauth->client_id = "elimmsk4tfqtc7b9il0vk5u3d7";
-$oauth->client_secret = "amq5s5799jnv5bdrt65ofg4mtq";
+$oauth->client_secret = "au1eo0jqihqvgk6vrtp4sfmfn9";
 $oauth->redirect_uri  ="http://radiant-anchorage-6507.herokuapp.com/messenger.php";
 
 $oauth->scope="basic, messaging";
