@@ -11,7 +11,7 @@ $oauth->scope="basic, messaging, ageless";
 
 $oauth->Initialize();
 
-$code = ($_REQUEST["code"]) ?  ($_REQUEST["code"]) : "";
+//$code = ($_REQUEST["code"]) ?  ($_REQUEST["code"]) : "";
 
 if(empty($code)) {
 	$oauth->Authorize();
