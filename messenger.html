@@ -19,7 +19,11 @@ $(document).ready(function(){
 	
 	$(".logout").click(function(){
 		$.ajax({ // ajax call starts
-			url: 'de-meetup.php' // JQuery loads serverside.php
+			url: 'de-meetup.php', // JQuery loads serverside.php
+			success: function(data) // Variable data contains the data we get from serverside
+			{	
+			  $('#confirmation').html(data); // Clear #groups div
+			}
 		});
 	});
 

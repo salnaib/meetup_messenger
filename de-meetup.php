@@ -2,7 +2,6 @@
 
 unset($_SESSION['accesstoken']);
 
-header("Location: index.php");
-die();
+echo 'logged out';
 
 ?>
