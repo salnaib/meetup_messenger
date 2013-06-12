@@ -9,6 +9,7 @@ $(document).ready(function(){
 	$(".send").click(function(){
 		$.ajax({ // ajax call starts
 			url: 'sendmessage.php', // JQuery loads serverside.php
+			type: 'post',
 			data: { memberid: $("#memberid").val(), groupid: $("#groupid").val(), message: $("#message").val(), subject: $("#subject").val() }, // message info
 			success: function(data) // Variable data contains the data we get from serverside
 			{	
