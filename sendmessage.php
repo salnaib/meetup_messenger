@@ -13,6 +13,13 @@ curl_setopt($ch,CURLOPT_POST, 5);
 $r=curl_exec($ch);
 curl_close($ch);
 
+if(json_decode($r)->problem = "") {
+	echo $url;
+} else {
+	echo "Message sent";
+}
+
+
 echo $r
 
 ?>
