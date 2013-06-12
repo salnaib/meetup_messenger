@@ -19,7 +19,4 @@ if(json_decode($r)->problem = "") {
 	echo "Message sent";
 }
 
-
-echo $r
-
 ?>
