@@ -13,6 +13,6 @@ curl_setopt($ch,CURLOPT_POST, 5);
 $r=curl_exec($ch);
 curl_close($ch);
 
-echo $url;
+echo $r;
 
 ?>
